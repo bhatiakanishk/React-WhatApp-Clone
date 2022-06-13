@@ -18,7 +18,8 @@ function Chat() {
 
     const sendMessage = (e) => {
         e.preventDefault();
-    }
+        setInput("");
+    };
 
   return (
     <div className="chat">
