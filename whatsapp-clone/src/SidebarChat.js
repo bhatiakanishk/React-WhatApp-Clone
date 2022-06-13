@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar } from "@mui/material";
 import './Sidebar.css';
+import './SidebarChat.css'
 
 function SidebarChat({addNewChat}) {
     const [seed, setSeed] = useState(''); 
