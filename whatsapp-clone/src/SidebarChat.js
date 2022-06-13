@@ -4,7 +4,8 @@ import './Sidebar.css';
 import './SidebarChat.css'
 
 function SidebarChat({addNewChat}) {
-    const [seed, setSeed] = useState(''); 
+    const [seed, setSeed] = useState(""); 
+
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 5000));
     }, []);
