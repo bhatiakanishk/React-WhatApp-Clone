@@ -7,10 +7,12 @@ import AttachFileIcon from '@mui/icons-material/AttachFile';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import MicIcon from '@mui/icons-material/Mic';
 import InsertEmoticon from '@mui/icons-material/InsertEmoticon';
+import { useParams } from 'react-router-dom';
 
 function Chat() {
     const [input, setInput] = useState("");
     const [seed, setSeed] = useState(""); 
+    const { roomID } = useParams();
 
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 5000));
