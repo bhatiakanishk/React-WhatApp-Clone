@@ -46,10 +46,11 @@ function Sidebar() {
                 <input placeholder="Search or start new chat" type="text" />
             </div>
         </div>
+
         <div className="sidebar_chats">
             <SidebarChat addNewChat/>
             {rooms.map((room) => (
-                <SidebarChat key={room.id} id={rooms.id} name={rooms.data.name} />
+                <SidebarChat key={room.id} id={room.id} name={room.data.name} />
             ))}
         </div>
     </div>
