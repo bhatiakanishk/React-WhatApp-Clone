@@ -36,7 +36,8 @@ function Chat() {
             </div>
         </div>
         <div className="chat_body">
-
+            <p className="chat_message">Hey guys</p>
+            <p className="chat_message">Hey guys</p>
         </div>
         <div className="chat_footer">
 
