@@ -9,7 +9,9 @@ import MicIcon from '@mui/icons-material/Mic';
 import { useParams } from 'react-router-dom';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
-import firebase from 'firebase';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 function Chat() {
     const [input, setInput] = useState("");
