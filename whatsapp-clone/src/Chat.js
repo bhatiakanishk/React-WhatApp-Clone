@@ -6,14 +6,18 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import MicIcon from '@mui/icons-material/Mic';
-import InsertEmoticon from '@mui/icons-material/InsertEmoticon';
 import { useParams } from 'react-router-dom';
 import db from './firebase';
 
 function Chat() {
     const [input, setInput] = useState("");
+    const [seed, setSeed] = useState(""); 
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
+
+    useEffect(() =>{
+        setSeed(Math.floor(Math.random() * 5000));
+    }, []);
 
     useEffect(() => {
         if(roomId) {
@@ -24,13 +28,14 @@ function Chat() {
 
     const sendMessage = (e) => {
         e.preventDefault();
+        console.log("You typed >>> ", input);
         setInput("");
     };
-
+    console.log(roomName)
   return (
     <div className="chat">
         <div className="chat_header">
-            <Avatar src={`https://avatars.dicebear.com/api/human/${Math.floor(Math.random() * 5000)}.svg`}/>
+            <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
             
             <div className="chat_headerInfo">
                 <h3>{roomName}</h3>
